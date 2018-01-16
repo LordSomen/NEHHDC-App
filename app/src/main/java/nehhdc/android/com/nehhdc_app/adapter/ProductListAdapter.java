@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
@@ -75,11 +73,10 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     @Override
     public void onBindViewHolder(ProductItemViewHolder holder, int position) {
         ProductItem productItem = mProductArrayList.get(position);
-        storageReference = storageReference.child(productItem.getItemName());
-        Glide.with(mContext)
-                .using(new FirebaseImageLoader())
-                .load(storageReference)
-                .into(holder.productImageView);
+//        storageReference = storageReference.child(productItem.getItemName());
+//        Glide.with(mContext)
+//                .load(R.drawable.bag1)
+//                .into(holder.productImageView);
     }
 
     @Override

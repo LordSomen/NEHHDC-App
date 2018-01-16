@@ -72,11 +72,11 @@ public class ProductGalleryActivity extends Fragment implements ProductListAdapt
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
                                                      @Override
                                                      public void onDataChange(DataSnapshot dataSnapshot) {
-                                                         productListProgressBar.setVisibility(View.VISIBLE);
+//                                                         productListProgressBar.setVisibility(View.VISIBLE);
                                                          for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                                              for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                                                                 ProductItem productItem = new ProductItem(snapshot1.child("imageURL").toString(), false,
-                                                                         false, Integer.parseInt(snapshot1.child("price").toString()));
+                                                                 ProductItem productItem = new ProductItem(snapshot1.child("imageURL").getValue().toString(), false,
+                                                                         false, Integer.parseInt(snapshot1.child("price").getValue().toString()));
                                                                  mProductList.add(productItem);
                                                              }
                                                          }
