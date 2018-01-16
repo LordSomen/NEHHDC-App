@@ -5,4 +5,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="category_all">All</string>
+    <string name="category_bag">bag</string>
+    <string name="category_saree">saree</string>
+    <string name="category_furniture">furniture</string>
+    <string name="category_shawl">shawl</string>
+    <string name="category_jewellery">jewellery</string>
+    <string name="category_others">others</string>
+    <string name="category_pillow">pillow</string>
 </resources>
