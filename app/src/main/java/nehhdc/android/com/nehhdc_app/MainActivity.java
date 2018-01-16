@@ -81,12 +81,15 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+
         if (id == R.id.action_settings) {
             return true;
         }else if(id == R.id.action_sign_out){
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(MainActivity.this,LoginActivity.class));
             finish();
+        }else if(id == R.id.action_cart){
+            startActivity(new Intent(MainActivity.this,CartActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
